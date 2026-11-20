@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>{{ page.title | escape }} | {{ site.title }}</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Malgun Gothic", sans-serif;
+      color: #24364b;
+      line-height: 1.9;
+      background: #ffffff;
+      word-break: keep-all;
+    }
+
+    header {
+      padding: 22px 24px;
+      border-bottom: 1px solid #e4e8ec;
+    }
+
+    header a {
+      color: #24364b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 75px 24px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 38px);
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+
+    .date {
+      font-size: 13px;
+      color: #788592;
+      margin-bottom: 50px;
+    }
+
+    article {
+      font-size: 16px;
+      overflow-wrap: break-word;
+    }
+
+    article h2 {
+      margin-top: 45px;
+      font-size: 23px;
+    }
+
+    article h3 {
+      margin-top: 30px;
+    }
+
+    article a {
+      color: #376b9a;
+    }
+
+    article img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    article pre {
+      overflow-x: auto;
+      padding: 15px;
+      background: #f5f7f9;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 20px;
+      border-left: 3px solid #b4c3d1;
+      color: #667482;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 65px;
+      padding-top: 25px;
+      border-top: 1px solid #e4e8ec;
+      color: #667482;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      color: #87929d;
+      font-size: 12px;
+      border-top: 1px solid #e4e8ec;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="{{ '/' | relative_url }}">
+      앎의 경계에서
+    </a>
+  </header>
+
+  <main>
+    <h1>{{ page.title | escape }}</h1>
+
+    <p class="date">
+      {{ page.date | date: "%Y.%m.%d" }}
+    </p>
+
+    <article>
+      {{ content }}
+    </article>
+
+    <a class="back"
+       href="{{ '/#notes' | relative_url }}">
+      ← 학술 노트로 돌아가기
+    </a>
+  </main>
+
+  <footer>
+    © 2026 김소영 · 앎의 경계에서
+  </footer>
+</body>
+</html>
