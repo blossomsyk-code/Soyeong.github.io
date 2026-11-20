@@ -1,0 +1,20 @@
+
+title: "앎의 경계에서"
+description: "익숙한 것을 다시 묻고, 경험을 지식으로 연결하다."
+
+url: "https://blossomsyk-code.github.io"
+baseurl: "/Soyeong.github.io"
+
+lang: ko
+timezone: Asia/Seoul
+
+markdown: kramdown
+
+permalink: /:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
